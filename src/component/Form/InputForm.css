@@ -42,3 +42,7 @@
     font-size: 1.2rem;
     border-radius: .6rem;
   }
+
+  .task-group button span{
+    padding-right: 10px;
+  }
