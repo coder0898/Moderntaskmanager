@@ -1,0 +1,17 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+  }
+  
+  img{
+    width: 5rem;
+    height: 5rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+  

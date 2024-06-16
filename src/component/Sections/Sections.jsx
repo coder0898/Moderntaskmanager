@@ -1,0 +1,28 @@
+import React from "react";
+import "./Sections.css";
+import Card from "../Card/Card";
+import SectionHead from "../Header/SectionHead";
+
+const Sections = ({ headTitle, task, status }) => {
+  return (
+    <>
+      <section>
+        <div>
+          <SectionHead headTitle={headTitle} />
+        </div>
+        {task.map(
+          (item, index) =>
+            item.status === status && (
+              <Card key={index} title={item.task} priority={item.priority} />
+            )
+        )}
+        {/* {task &&
+          task.map((item, index) => {
+            return item.status === status && <Card />;
+          })} */}
+      </section>
+    </>
+  );
+};
+
+export default Sections;
