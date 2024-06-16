@@ -1,16 +1,16 @@
 import React from "react";
 
-const Card = ({ title, priority }) => {
+const Card = ({ index, title, priority, handleDelete }) => {
   return (
     <>
-      <article className="task_card">
+      <article className="task_card" key={index}>
         <p className="task_text">{title}</p>
 
         <div className="task_card_bottom_line">
           <div className="task_card_tags">{priority}</div>
-          <div className="task_delete">
+          <button className="task_delete" onClick={() => handleDelete(index)}>
             <i className="fa-solid fa-trash"></i>
-          </div>
+          </button>
         </div>
       </article>
     </>

@@ -21,6 +21,11 @@ const InputForm = ({ setTask }) => {
     setTask((prev) => {
       return [...prev, taskData];
     });
+    setTaskData({
+      task: "",
+      status: "",
+      priority: "",
+    });
   };
 
   return (
@@ -56,7 +61,7 @@ const InputForm = ({ setTask }) => {
               handleChange(e);
             }}
           >
-            <option value="">Select Type</option>
+            <option value="">Select Status</option>
             <option value="todo">Todo</option>
             <option value="working">Working</option>
             <option value="completed">Completed</option>

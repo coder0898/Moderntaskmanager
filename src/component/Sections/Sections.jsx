@@ -3,7 +3,7 @@ import "./Sections.css";
 import Card from "../Card/Card";
 import SectionHead from "../Header/SectionHead";
 
-const Sections = ({ headTitle, task, status }) => {
+const Sections = ({ headTitle, task, status, handleDelete }) => {
   return (
     <>
       <section>
@@ -13,7 +13,13 @@ const Sections = ({ headTitle, task, status }) => {
         {task.map(
           (item, index) =>
             item.status === status && (
-              <Card key={index} title={item.task} priority={item.priority} />
+              <Card
+                key={index}
+                index={index}
+                title={item.task}
+                priority={item.priority}
+                handleDelete={handleDelete}
+              />
             )
         )}
         {/* {task &&

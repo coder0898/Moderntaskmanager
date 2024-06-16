@@ -51,11 +51,15 @@
     width: 35px;
     height: 35px;
     border-radius: 100%;
+    border: none;
+    outline: none;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    color: red;
+    background: transparent;
   }
   
   .task_delete:hover {
